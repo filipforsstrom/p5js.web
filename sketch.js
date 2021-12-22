@@ -1,6 +1,6 @@
 let webs = [];
 let circle = [];
-const webNum = 1000;
+const webNum = 10;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -10,19 +10,16 @@ function setup() {
     webs[i] = new Web(random(0, width * 2), random(0, height * 2));
   }
   circle[0] = new Circle(width / 2, height / 2, 400);
-  circle[1] = new Circle(width / 2, height / 2, 10);
 }
 
 function draw() {
-  circle[0].display();
-  circle[0].move();
+  // circle[0].display();
+  // circle[0].move();
   for (w of webs) {
     w.display();
     w.move();
   }
-  // circle[1].display();
-  // circle[1].move();
-  ellipse(width / 2, height / 2, 100, 100);
+  //ellipse(width / 2, height / 2, 100, 100);
 }
 
 class Web {
